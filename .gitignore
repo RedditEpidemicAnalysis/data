@@ -1,7 +1,0 @@
-# IDE/tools
-__pycache__
-.vscode
-*.bak
-
-# Config files
-praw.ini
