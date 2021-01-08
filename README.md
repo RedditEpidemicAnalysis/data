@@ -1,5 +1,8 @@
 # Reddit Analysis on COVID-19
 
+![PowerShell](https://img.shields.io/badge/PowerShell-5.1.x-blue.svg)
+![CC0 license](https://img.shields.io/badge/License-CC0-green.svg)
+
 Below can be found a list of data retrieval scripts that help make this work possible.
 The pathing can be changed to any desired location.
 
