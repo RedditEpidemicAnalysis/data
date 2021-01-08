@@ -28,3 +28,25 @@ The pathing can be changed to any desired location.
    }
    ```
  
+# Citation
+
+If you use the dataset in academic work, please consider citing it based on the original source.
+All the `.tar.gz`s in [Releases](https://github.com/RedditEpidemicAnalysis/data/releases) are a cache of a cache.
+
+```{bib}
+@misc{baumgartner2021,
+  title={Historical submissions from /r/COVID19positive},
+  author={Jason Baumgartner},
+  year={2021},
+  publisher={pushshift.io},
+  url={https://pushshift.io/},
+  urldate={2021-01-07}
+}
+@misc{marx2021python,
+  title={Python Pushshift.io API Wrapper},
+  author={David Marx},
+  year={2021},
+  url={https://github.com/dmarx/psaw},
+  urldate={2021-01-07}
+}
+```
