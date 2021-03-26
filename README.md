@@ -21,8 +21,8 @@ The pathing can be changed to any desired location.
       for($i = 0; $i -lt ($months.length -1); $i++) {
          $subreddit = $subreddits[$j]
          $month = $months[$i]
-         $after = '$($months[$i])-01'
-         $before = '$($months[$i+1])-01'
+         $after = "$($months[$i])-01"
+         $before = "$($months[$i+1])-01"
          psaw `
             -s $subreddit `
             -l 1000000 `
