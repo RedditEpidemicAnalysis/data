@@ -32,7 +32,7 @@ The pathing can be changed to any desired location.
             --before $before `
             -f id,created_utc,author,title,selftext `
             -o "d:/datasets/reddit/$subreddit.submissions.$month.json" `
-            --prettify `
+            --prettify --verbose `
             submissions
          Start-Sleep -s 20
          psaw `
@@ -43,7 +43,7 @@ The pathing can be changed to any desired location.
             --before $before `
             -f id,parent_id,created_utc,author,body `
             -o "d:/datasets/reddit/$subreddit.comments.$month.json" `
-            --prettify `
+            --prettify --verbose `
             comments
          Start-Sleep -s 20
       }}
