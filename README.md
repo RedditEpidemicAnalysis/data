@@ -23,6 +23,7 @@ The pathing can be changed to any desired location.
          $month = $months[$i]
          $after = "$($months[$i])-01"
          $before = "$($months[$i+1])-01"
+         Write-host "$subreddit ($after, $before)"
          psaw `
             -s $subreddit `
             -l 1000000 `
@@ -31,7 +32,7 @@ The pathing can be changed to any desired location.
             --before $before `
             -f id,created_utc,author,title,selftext `
             -o "d:/datasets/reddit/$subreddit.submissions.$month.json" `
-            --prettify --verbose `
+            --prettify `
             submissions
          Start-Sleep -s 20
          psaw `
@@ -42,7 +43,7 @@ The pathing can be changed to any desired location.
             --before $before `
             -f id,parent_id,created_utc,author,body `
             -o "d:/datasets/reddit/$subreddit.comments.$month.json" `
-            --prettify --verbose `
+            --prettify `
             comments
          Start-Sleep -s 20
       }}
