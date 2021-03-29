@@ -16,13 +16,14 @@ The pathing can be changed to any desired location.
    $subreddits = @('COVID19positive', 'COVID19_support')
    $months = @(
       '2020-02', '2020-03', '2020-04', '2020-05', '2020-06', '2020-07', '2020-08', '2020-09', 
-      '2020-10', '2020-11', '2020-12', '2021-01', '2021-02', '2021-03', '2021-04')
-   for($j = 0; $j -lt ($subreddits.length); $j++) {
-      for($i = 0; $i -lt ($months.length -1); $i++) {
+      '2020-10', '2020-11', '2020-12', '2021-01', '2021-02', '2021-03')
+   for($j = 0; $j -lt $subreddits.length; $j++) {
+      for($i = 0; $i -lt $months.length; $i++) {
          $subreddit = $subreddits[$j]
-         $month = $months[$i]
-         $after = "$($months[$i])-01"
-         $before = "$($months[$i+1])-01"
+         $month = [datetime]::ParseExact($months[0], 'yyyy-MM', $null)
+         $after = $month.ToString('yyyy-MM-dd HH:mm:ss')
+         $before = $month.AddMonths(1).AddSeconds(-1).ToString('yyyy-MM-dd HH:mm:ss')
+         $month = $month.ToString('yyyy-MM')
          Write-host "$subreddit ($after, $before)"
          psaw `
             -s $subreddit `
